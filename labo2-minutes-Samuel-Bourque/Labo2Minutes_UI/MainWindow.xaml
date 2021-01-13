@@ -1,0 +1,42 @@
+﻿<Window x:Class="Labo2Minutes_UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labo2Minutes_UI"
+        xmlns:metier="clr-namespace:Calculateur_Affaires;assembly=Calculateur_Affaires"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="3Q5-Labo #2" SizeToContent="WidthAndHeight">
+
+    <Window.Resources>
+        
+        <ObjectDataProvider x:Key="convertisseurMinutes"
+                            ObjectType="{x:Type metier:Calculateur}"
+                            MethodName="calculerMinutes">
+            <ObjectDataProvider.MethodParameters>
+                <sys:Int32>150</sys:Int32>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+
+        <local:ConvertisseurIntDouble x:Key="ConvertisseurIntDouble"/>
+    
+    </Window.Resources>
+
+    <StackPanel>
+        <TextBlock Text="Calculateur minutes" FontSize="36" HorizontalAlignment="Center" Margin="10"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Nb secondes (entier): " FontSize="24" Margin="10"/>
+            <TextBox Text="{Binding Source={StaticResource convertisseurMinutes},
+                     UpdateSourceTrigger=PropertyChanged,
+                     Converter={StaticResource ConvertisseurIntDouble},
+                     Path=MethodParameters[0],
+                     Mode=TwoWay,
+                     BindsDirectlyToSource=True}" 
+                     FontSize="24" Margin="10" Width="100" TextAlignment="Right" Foreground="Blue" FontWeight="Black"/>
+            <TextBlock Text="       Minutes: " FontSize="24" Margin="10"/>
+            <TextBlock Text="{Binding Source={StaticResource convertisseurMinutes},Mode=OneWay}" 
+                       FontSize="24" Margin="10" Foreground="Blue" FontWeight="Black" Width="100"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

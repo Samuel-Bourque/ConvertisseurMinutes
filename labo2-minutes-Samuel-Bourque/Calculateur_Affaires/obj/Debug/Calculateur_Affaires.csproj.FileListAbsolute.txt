@@ -1,0 +1,5 @@
+C:\Users\1232291\Source\Repos\labo2-minutes-Samuel-Bourque\Calculateur_Affaires\bin\Debug\Calculateur_Affaires.dll
+C:\Users\1232291\Source\Repos\labo2-minutes-Samuel-Bourque\Calculateur_Affaires\bin\Debug\Calculateur_Affaires.pdb
+C:\Users\1232291\Source\Repos\labo2-minutes-Samuel-Bourque\Calculateur_Affaires\obj\Debug\Calculateur_Affaires.csproj.CoreCompileInputs.cache
+C:\Users\1232291\Source\Repos\labo2-minutes-Samuel-Bourque\Calculateur_Affaires\obj\Debug\Calculateur_Affaires.dll
+C:\Users\1232291\Source\Repos\labo2-minutes-Samuel-Bourque\Calculateur_Affaires\obj\Debug\Calculateur_Affaires.pdb
